@@ -15,6 +15,8 @@ import { BrowserRouter, Navigate, Route, Routes, } from 'react-router-dom';
 function App() {
 
   return (
+
+    <div className="border border-5 border-primary w-100">
     <BrowserRouter>
     <NavBar />
     <Routes> 
@@ -31,6 +33,7 @@ function App() {
     </Routes>
     <ItemCount inital={1} stock={10} onAdd={()=>{}} />
     </BrowserRouter>
+    </div>
     
    
   )

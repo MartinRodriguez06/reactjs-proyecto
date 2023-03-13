@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom"
 import { gFetch } from "../../utils/gFetch"
+import AgregarAlCart from "../AgregarAlCart/Agregar"
+import { Input } from "../Input/Input"
 
 export const ItemDetailContainer = () => {
   
@@ -8,6 +10,10 @@ export const ItemDetailContainer = () => {
   gFetch(idProducto)
   
   return (
-    <div>ItemDetailContainer id: {idProducto}</div>
+    <div>
+      ItemDetailContainer id: {idProducto}
+      {/*<Input/>*/}
+      
+    </div>
   )
 }

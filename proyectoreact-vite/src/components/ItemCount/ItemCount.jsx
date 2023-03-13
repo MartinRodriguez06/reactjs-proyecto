@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import AgregarAlCart from "../AgregarAlCart/Agregar";
 
 const ItemCount = ({ initial= 1, stock=10, onAdd}) => {
     return (
@@ -20,7 +23,7 @@ const ItemCount = ({ initial= 1, stock=10, onAdd}) => {
                 </div>
             </div>
             <div className="card-footer">
-                <button className="btn btn-outline-dark w-100" onClick={()=>{}}>Agregar al carrito</button>
+                <AgregarAlCart/>
             </div>
 
 
