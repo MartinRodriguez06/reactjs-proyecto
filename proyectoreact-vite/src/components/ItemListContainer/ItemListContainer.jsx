@@ -6,6 +6,11 @@ import Titulo from "../Titulo/Titulo"
 
 
 const Loading = ()=>{
+  
+   useEffect(()=>{
+    return ()=> console.log('desmontado loading...')
+   })
+
   return(
     <h2>Cargando....</h2>
   )
@@ -40,7 +45,7 @@ console.log(idCategoria)
 
    { loading ? 
       
-      <loading/>
+      <Loading/>
    :
    <>
    <ItemList productos={productos}/>
