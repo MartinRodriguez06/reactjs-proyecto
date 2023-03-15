@@ -1,29 +1,43 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import AgregarAlCart from "../AgregarAlCart/Agregar";
+import { useState } from "react"
+
 
 const ItemCount = ({ initial= 1, stock=10, onAdd}) => {
+
+    const [count, setCount] = useState(initial)
+
+    const sumar = ()=> {
+        if(count<stock){
+            setCount(count+1)
+        }
+    }
+    const restar = ()=> {
+        if(count>initial){
+            setCount(count-1)
+        }
+    }
+
     return (
         <div className="card mt-5 w-50 ml-5" >
             <div className="card-body row">
                 <div className="col">
-                <button className="btn btn-outline-dark w-100" onClick={()=>{}}> + </button>
+                <button className="btn btn-outline-dark w-100" onClick={sumar}> + </button>
 
                 </div>
                 <div className="col">
                 <center>
-                <label>{1}</label>
+                <label>{count}</label>
 
                 </center> 
     
                 </div>
                 <div className="col">
-                <button className="btn btn-outline-dark w-100" onClick={()=>{} }> - </button>
+                <button className="btn btn-outline-dark w-100" onClick={restar }> - </button>
 
                 </div>
             </div>
             <div className="card-footer">
-                <AgregarAlCart/>
+              { /* <AgregarAlCart/>*/}
+              <button className="btn btn-outline-dark w-100" onClick={()=>onAdd(count)}> Agregar al carrito </button>
             </div>
 
 

@@ -10,12 +10,12 @@ let productos = [
 ]
 
 
-export const gFetch = () => new Promise( (res, rej)=>{
+export const gFetch = (id) => new Promise( (res, rej)=>{
     let condition = true
     if (condition) {
         setTimeout(()=>{
-            res(productos)    
-        }, 2000)
+            res(id ? productos.find(prod =>id === prod.id): productos)    
+        }, 1000)
     } else {
         rej('Todo mal ')
         

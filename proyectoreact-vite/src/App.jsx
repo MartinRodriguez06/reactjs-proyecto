@@ -4,9 +4,11 @@ import reactLogo from './assets/react.svg'
 import NavBar from './components/NavBar/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
 import ItemCount from './components/ItemCount/ItemCount';
 import { BrowserRouter, Navigate, Route, Routes, } from 'react-router-dom';
+import { CartContextProvider } from './context/CartContext';
 
 
 
@@ -14,10 +16,13 @@ import { BrowserRouter, Navigate, Route, Routes, } from 'react-router-dom';
 
 function App() {
 
+
   return (
 
-    <div className="border border-5 border-primary w-100">
+    <div className="border border-5">
     <BrowserRouter>
+    <CartContextProvider>
+    
     <NavBar />
     <Routes> 
       <Route path='/' element={ <ItemListContainer saludo='hola soy ItemListContainer'/>} />
@@ -31,8 +36,13 @@ function App() {
        
 
     </Routes>
-    <ItemCount inital={1} stock={10} onAdd={()=>{}} />
+     {/*<ItemCount inital={1} stock={10} onAdd={()=>{}} />*/}
+  
+    </CartContextProvider>
     </BrowserRouter>
+
+     
+   
     </div>
     
    
