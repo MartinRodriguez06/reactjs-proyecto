@@ -3,12 +3,9 @@ import item from "../item/item"
 
 const ItemList = ({productos}) => {
   return (
-    <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap'
-      }}>
-        {productos.map( producto => <item producto={producto}/>)
+    <div className="d-flex justify-content-center align-item-center">
+        {
+        productos.map( producto => <item producto={producto}/>)
         }
       </div>
   )
