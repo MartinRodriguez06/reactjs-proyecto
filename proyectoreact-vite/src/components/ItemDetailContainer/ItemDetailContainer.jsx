@@ -1,7 +1,6 @@
 import{ doc, getDoc, getFirestore } from 'firebase/firestore'
 import {  useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { gFetch } from "../../utils/gFetch"
 import ItemDetail from "../ItemDetail/ItemDetail"
 
 
@@ -12,7 +11,7 @@ import ItemDetail from "../ItemDetail/ItemDetail"
   const {idProducto}= useParams()
 
   
-  //console.log(idProducto)
+  
 
   useEffect(()=>{ 
     const db = getFirestore()

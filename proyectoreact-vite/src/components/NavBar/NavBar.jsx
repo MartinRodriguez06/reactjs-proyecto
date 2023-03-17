@@ -1,8 +1,14 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link, NavLink } from 'react-router-dom';
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget"
+
+
+const categorias = [
+  {id: "p1", path: "/categoria/fantasia", name: "Libros-fantasia", description: "Libros de fantasia" },
+  {id: "p2", path: "/categoria/historia", name: "Libros-Historia", description: "Libros de historia" }
+]
+
+
 function NavBar() {
     return(
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -11,8 +17,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink className={(isActive)=> isActive ? 'btn btn-primary': 'btn btn-outline-primary'} to='/categoria/fantasia'>Libros-Fantasia</NavLink>
-            <NavLink className={(isActive)=> isActive ? 'btn btn-primary': 'btn btn-outline-primary'} to='/categoria/historia'>Libros-Historia</NavLink>
+            {categorias.map(cat =>  <NavLink key={cat.id} className={(isActive)=> isActive ? 'btn btn-primary': 'btn btn-outline-primary'} to={cat.path}>{cat.name}</NavLink>)}
           </Nav>
           <Nav>
            {/* <Nav.Link eventKey={2} href="#memes">
