@@ -20,8 +20,7 @@ function NavBar() {
             {categorias.map(cat =>  <NavLink key={cat.id} className={(isActive)=> isActive ? 'btn btn-primary': 'btn btn-outline-primary'} to={cat.path}>{cat.name}</NavLink>)}
           </Nav>
           <Nav>
-           {/* <Nav.Link eventKey={2} href="#memes">
-            </Nav.Link>*/}
+           
               <Link to='/cart'> <CartWidget/> </Link>
               
             

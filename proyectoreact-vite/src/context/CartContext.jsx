@@ -8,7 +8,7 @@ const useCartContext = () => {
 
 
 export const CartContextProvider = ({ children }) => {
-    //estados y funciones globales
+   
     const [cartList, setCartList] = useState([])
 
     const agregarAlCarrito = (producto) => {

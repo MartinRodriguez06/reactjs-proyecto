@@ -34,7 +34,7 @@ const ButtonCount= ({handleInter})=> {
 
 }
 
-// Nonbre referencial 
+
 const AgregarAlCart = () => {
 
     const [inputType, setInputType ] = useState('button')
@@ -52,7 +52,7 @@ const AgregarAlCart = () => {
                 : 
                     <InputCount />
             }
-             {/* <Count onConfirm={addToCart} maxQuantity={itemMax} />  */}
+             
         </div>
     )
 }

@@ -22,17 +22,13 @@ function App() {
     <Routes> 
       <Route path='/' element={ <ItemListContainer saludo='hola soy ItemListContainer'/>} />
       <Route path='/categoria/:idCategoria' element={ <ItemListContainer saludo='hola soy ItemListContainer'/>} />
-      {/*<Route path='/categoria/historia' element={ <ItemListContainer saludo='hola soy ItemListContainer'/>} />*/}
       <Route path='/detalle/:idProducto' element={<ItemDetailContainer/> }/>
       <Route path='/cart' element = { <CartContainer />} />
 
       <Route path='*' element={<Navigate to='/'/>} />
       
       
-       
-
     </Routes>
-     {/*<ItemCount inital={1} stock={10} onAdd={()=>{}} />*/}
   
     </CartContextProvider>
     </BrowserRouter>
