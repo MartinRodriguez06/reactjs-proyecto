@@ -1,7 +1,7 @@
 import { addDoc, collection, getFirestore,} from "firebase/firestore"
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { useCartContext } from "../../Context/CartContext"
+import { useCartContext } from "../../context/CartContext"
 import CartList from "../CartList/CartList"
 import Form from "../Form/Form"
 

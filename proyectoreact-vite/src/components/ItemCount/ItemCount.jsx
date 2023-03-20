@@ -17,7 +17,7 @@ const ItemCount = ({ initial= 1, stock=10, onAdd}) => {
     }
 
     return (
-        <div className="card mt-5 w-50 ml-5" >
+        <div className="card mt-5 w-50 ml-5 d-flex justify-content-center align-items-center" >
             <div className="card-body row">
                 <div className="col">
                 <button className="btn btn-outline-dark w-100" onClick={sumar}> + </button>

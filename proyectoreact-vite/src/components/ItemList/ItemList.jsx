@@ -6,7 +6,7 @@ const ItemList = memo( ({productos}) => {
   return (
     <div className="d-flex justify-content-center align-item-center">
         {
-        productos.map( producto => <Item producto={producto}/>)
+        productos.map((producto) => <Item key={producto.id} producto={producto} />)
         }
       </div>
   )
